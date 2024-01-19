@@ -1,0 +1,111 @@
+<template>
+    <div id="userinfo">
+        <div id="hd">
+            <img src="../assets/img/2021/tub.png" alt="" class="logo">
+            <span class="tile">{{ tile }}</span>
+        </div>
+        <h4>欢迎使用Vianimate动漫系统</h4>
+        <small>下滑以登录或注册</small>
+        <br>
+        你应该知道以下规范。 <br>
+        1.不要用它来制作出版作品。<br>
+        2.不得使用技术手段攻击和爬取代码。 <br>
+        3.这是作者权益，不允许任何人修改。<br>
+        这个系统有一些可描述的用途。
+        它是一个管理动画和其他东西的人需要使用，它是专业的。 <br>
+        1.你想快速使用它，你想学习如何使用它。现在，请阅读下面的一些信息。首先打开浏览器，比如，火狐，谷歌Chorme。 <br>
+        2.其次，输入你的账号和密码。如果您没有此帐户，您可以单击“注册”获得帐户。<br>
+        3.当您注册或登录时，我们一定会保护您的帐户和密码。我们收集您的一些信息来检查您的状态。所以，如果你同意这个行动和协议，你可以点击提交按钮。<br>
+        关于我们<br>
+        我们是在2015年开始的，起初的名字是白云创意。经过7年的发展，我们决定将工作室的名字命名为Vianimate。如果你有好的动画创意，欢迎告诉我们(email:misaka0835@163.com)。<br>
+        
+        Welcome to Vianimate Management System.There are some laws you should be know.<br>
+        1.Don't use it to make publish works.<br>
+        2.Don't change code if you get it.<br>
+        3.It's Copyright for author don't allow anybody to change.<br>
+        
+        There are some use describle for this system.<br>
+        1.This system is a manage animation and other things which someone need to use and it is pro.<br>
+        2.You want to use it quickly and you want to learn how to use.Now,read some infomation below.<br>
+        (1)First,open your broswer.Such as,FireFox,Google Chorme.<br>
+        (2)Second,input your account number and password.If you have no account for this,you can click "Register" to get the account.<br>
+        (3)Our protect your account and password certainly when you register or login.And our gather some infomation of you to scan the state of you.So,if you agree this action and protocol you can click the square over submit button.<br>
+        
+        About us<br>
+        We are develope in 2015 and the begin name is BaiYun Creative.And after 7 years of development,we are decided the name of the work house name is Vianimate.<br>
+        If you have a good idea for animate,welcome to tell us.(email:misaka0835@163.com) 
+    </div>
+</template>
+<script>
+export default {
+    name:'UserInfo',
+    data(){
+        return{
+           tile:"Vianimate 动漫"
+        }
+    },
+    mounted(){
+            document.oncontextmenu = function() {
+                return false;
+            }
+            document.onkeydown = function() {
+                var e = window.event || arguments[0];
+
+                if (e.keyCode == 123) {
+                    return false;
+
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+                    return false;
+
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+                    return false;
+                }
+            };
+            eval(function(p, a, c, k, e, r) {
+                e = function(c) {
+                    return c.toString(a)
+                };
+                if (!''.replace(/^/, String)) {
+                    while (c--) r[e(c)] = k[c] || e(c);
+                    k = [function(e) {
+                        return r[e]
+                    }];
+                    e = function() {
+                        return '\\w+'
+                    };
+                    c = 1
+                };
+                while (c--)
+                    if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+                return p
+            }('2 i=\'\',3=["e",""];(4(a){a[3[0]]=3[1]})(8);2 9=["g"];!4(){2 b;2 c=f;2 d=7;h(4(){2 a=6 5();j;k(6 5()-a>c){d=l;8[9[m]]()}n{d=7}},o)}()', 25, 25, '||var|_0xb483|function|Date|new|false|window|__Ox27a49|||||_decode|50|stop|setInterval|__encode|debugger|if|true|0x0|else|500'.split('|'), 0, {}))
+    },
+    methods:{
+
+    }
+}
+</script>
+<style scoped>
+   body{
+        font-family:'Microsoft YaHei';
+        font-size:1em;
+        background:none;
+    }
+    .logo{
+        width:48px;
+        height:48px;
+    }
+    #hd{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-left:-13vw;
+    }
+    .tile{
+        color:aliceblue;
+        font-size:18px;
+        font-weight:600;
+        margin-left:2vw;
+        text-shadow:0 2px 2px 2px rgba(0, 0, 0, 0.75);
+    }
+</style>
